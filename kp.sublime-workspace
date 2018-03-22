@@ -37,21 +37,30 @@
 			}
 		},
 		{
+			"file": "process/hasil.php",
+			"settings":
+			{
+				"buffer_size": 2917,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "configuration/ai.php",
 			"settings":
 			{
-				"buffer_size": 1071,
+				"buffer_size": 1815,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "process/hasil.php",
+			"file": "configuration/tampil.php",
 			"settings":
 			{
-				"buffer_size": 2865,
+				"buffer_size": 309,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -59,6 +68,15 @@
 			"settings":
 			{
 				"buffer_size": 3260,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "configuration/main.php",
+			"settings":
+			{
+				"buffer_size": 116,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -102,11 +120,11 @@
 	],
 	"file_history":
 	[
+		"/home/rzl/Project/Web/KP/configuration/ai.php",
 		"/home/rzl/Project/Web/KP/configuration/main.php",
 		"/home/rzl/Project/Web/KP/process/tampilTable.php",
 		"/home/rzl/Project/Web/KP/configuration/controller.php",
 		"/home/rzl/Project/Web/KP/configuration/connection.php",
-		"/home/rzl/Project/Web/KP/configuration/ai.php",
 		"/home/rzl/Project/Web/KP/process/hasil.php",
 		"/home/rzl/Project/Web/KP/index.php",
 		"/home/rzl/Project/Web/softComputing/config/AI.php"
@@ -151,7 +169,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -178,10 +196,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 450.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -197,8 +215,8 @@
 						"selection":
 						[
 							[
-								246,
-								246
+								5,
+								5
 							]
 						],
 						"settings":
@@ -210,30 +228,87 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "configuration/ai.php",
+					"file": "process/hasil.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1071,
+						"buffer_size": 2917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1061,
-								1061
+								1047,
+								1047
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 182.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "configuration/ai.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1765,
+								1765
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "configuration/tampil.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 309,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								193,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -243,36 +318,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "process/hasil.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2865,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								490,
-								490
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 225.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "index.php",
 					"semi_transient": false,
 					"settings":
@@ -297,7 +343,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "configuration/main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]

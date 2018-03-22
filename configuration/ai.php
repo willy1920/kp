@@ -34,10 +34,39 @@
 				$tmpEntering = 0;
 			}
 
-			for ($i=0; $i < count($leavingFlow); $i++) { 
-				array_push($net, $leavingFlow[$i]-$enteringFlow[$i]);
+			for ($i=0; $i < count($leavingFlow); $i++) {
+				array_push($net, array());
+				for ($j=0; $j < $data['bound']; $j++) { 
+					array_push($net[$i], $data[$i][$j]);
+				}
+				array_push($net[$i], $leavingFlow[$i]-$enteringFlow[$i]);
 			}
-			print_r($net);
+			$net['length'] = $data['length'];
+			$net['bound'] = $data['bound'];
+
+			return $this->highToLow($net);
+			unset($net, $leavingFlow, $enteringFlow, $tmp, $tmp1, $tmpLeaving, $tmpEntering);
+
+		}
+
+		private function highToLow($data){
+			$tmp = array();
+
+			for ($i=0; $i < $data['length']; $i++) { 
+				for ($j=$i+1; $j < $data['length']; $j++) { 
+
+					if ($data[$i][$data['bound']] < $data[$j][$data['bound']]) {
+						for ($k=0; $k <= $data['bound']; $k++) { 
+							$tmp[$k] = $data[$j][$k];
+							$data[$j][$k] = $data[$i][$k];
+							$data[$i][$k] = $tmp[$k];
+						}
+
+					}
+				}
+			}
+			return $data;
+			unset($tmp, $data);
 		}
 	}
 ?>

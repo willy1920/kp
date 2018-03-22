@@ -44,7 +44,9 @@
 		$data['length'] = $j;
 		
 		$ai = new Ai;
-		$ai->promethee($data);
+		$tampil = new Tampil;
+		
+		$tampil->tampilHasilPro($ai->promethee($data));
 		//end prepare sql data
 	}else{
 		$jumlah = 0;
