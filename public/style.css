@@ -1,6 +1,6 @@
 header{
 	font-size: 25px;
-	border-bottom: 5px solid #00bcd4;
+	border-bottom: 5px solid #2196F3;
 	padding-top: 20px;
 }
 header, footer{
@@ -10,7 +10,8 @@ header, footer{
 	height: 80px;
 }
 footer{
-	border-top: 5px solid #00bcd4;
+	border-top: 5px solid #2196F3;
+	margin: 40px -40px -40px -40px;
 	font-size: 15px;
 	padding-top: 28px;
 }

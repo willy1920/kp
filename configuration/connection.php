@@ -9,7 +9,7 @@
 			$this->dbHost = "localhost";
 			$this->dbUser = "root";
 			$this->dbPasss = "";
-			$this->dbName = "kp";
+			$this->dbName = "spkpemilihanlaptop";
 		}
 
 		public function ConnectDB(){

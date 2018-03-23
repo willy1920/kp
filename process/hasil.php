@@ -2,7 +2,7 @@
 <?php
 	$dbUser = "root";
 	$dbHost = "localhost";
-	$dbName = "kp";
+	$dbName = "spkpemilihanlaptop";
 	$dbPass = "";
 
 	$connection = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
@@ -10,46 +10,51 @@
 	
 	if (!empty($_POST['pilih'])) {
 		$jumlah = count($_POST['pilih']);
-		$pilih = array();
-		foreach ($_POST['pilih'] as $check) {
-			array_push($pilih, $check);
-    	}
-    	//prepare sql data to select multiple records
-		$select = "(";
-		for ($i=0; $i < count($pilih); $i++) { 
-			if ($i == count($pilih)-1) {
-				$select .= $pilih[$i].")";
+		if ($jumlah == 1) {
+			echo "Tolong pilih minimal 2 laptop yang akan dibandingkan";
+		}else{
+			$pilih = array();
+			foreach ($_POST['pilih'] as $check) {
+				array_push($pilih, $check);
+	    	}
+	    	//prepare sql data to select multiple records
+			$select = "(";
+			for ($i=0; $i < count($pilih); $i++) { 
+				if ($i == count($pilih)-1) {
+					$select .= $pilih[$i].")";
+				}
+				else{
+					$select .= $pilih[$i].",";
+				}
 			}
-			else{
-				$select .= $pilih[$i].",";
+
+			$sql = "SELECT * FROM nilai WHERE id IN $select";
+			$query = $connection->query($sql);
+
+			$data = array();
+			for ($i=0; $i < $query->num_rows; $i++) { 
+				array_push($data, array());
 			}
-		}
 
-		$sql = "SELECT * FROM nilai WHERE id IN $select";
-		$query = $connection->query($sql);
-
-		$data = array();
-		for ($i=0; $i < $query->num_rows; $i++) { 
-			array_push($data, array());
-		}
-
-		$j = 0;
-		while ($row = $query->fetch_array(MYSQLI_NUM)) {
-			for ($i=0; $i < count($row); $i++) { 
-				array_push($data[$j], $row[$i]);
+			$j = 0;
+			while ($row = $query->fetch_array(MYSQLI_NUM)) {
+				for ($i=0; $i < count($row); $i++) { 
+					array_push($data[$j], $row[$i]);
+				}
+				$j++;
 			}
-			$j++;
+			$data['bound'] = 2;
+			$data['length'] = $j;
+			
+			$ai = new Ai;
+			$tampil = new Tampil;
+			
+			$tampil->tampilHasilPro($ai->promethee($data));
 		}
-		$data['bound'] = 2;
-		$data['length'] = $j;
-		
-		$ai = new Ai;
-		$tampil = new Tampil;
-		
-		$tampil->tampilHasilPro($ai->promethee($data));
 		//end prepare sql data
 	}else{
 		$jumlah = 0;
+		echo "Tolong pilih laptop yang akan dibandingkan";
 	}
 
 
@@ -73,9 +78,9 @@
 			}
 		}
 	}*/
-
+/*
 	if(empty($_POST['processor']) || empty($_POST['vga']) || empty($_POST['ukuran']) || empty($_POST['hdd']) || empty($_POST['ram'])){
-		echo "Tolong pilih Notebook atau Netbook yang akan dibandingkan dan tentukan nilai prioritas";
+		
 	}else{
 		$nilaiProcessor = $_POST['processor'];
 		$nilaiVga = $_POST['vga'];
@@ -102,5 +107,5 @@
 		}
 
 		echo "</div>";
-	}
+	} */
 ?>

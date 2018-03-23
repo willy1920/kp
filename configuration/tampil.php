@@ -1,23 +1,15 @@
 <?php
-	/**
-	* 
-	*/
-	class Tampil
-	{
-		
+	class Tampil{		
 		public function tampilHasilPro($data){
-			echo "<table>";
+			echo "<p>Hasil :</p><br><div id='hasil'>";
+			$tmp = 0;
 			for ($i=0; $i < $data['length']; $i++) { 
-				?>
-				<tr>
-					<?php 
-					for ($j=0; $j <= $data['bound']; $j++) { 
-						echo '<td>'.$data[$i][$j].'</td>';
-					}
-					?>
-				</tr>
-				<?php
+				if ($tmp < $data[$i][2]) {
+					$tmp=$data[$i][2];
+					$nama=$data[$i][1];
+				}
 			}
+			echo $nama;
 		}
 	}
 ?>
